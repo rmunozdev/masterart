@@ -1,0 +1,22 @@
+{
+  "name": "masterart",
+  "version": "1.0.0",
+  "description": "App for save my life",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rmunozdev/masterart.git"
+  },
+  "author": "rmunozdev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rmunozdev/masterart/issues"
+  },
+  "homepage": "https://github.com/rmunozdev/masterart#readme",
+  "dependencies": {
+    "acoustid": "https://github.com/parshap/node-acoustid/archive/v1.2.1.tar.gz"
+  }
+}
