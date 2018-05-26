@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/rmunozdev/masterart#readme",
   "dependencies": {
-    "acoustid": "https://github.com/parshap/node-acoustid/archive/v1.2.1.tar.gz"
+    "acoustid": "https://github.com/parshap/node-acoustid/archive/v1.2.1.tar.gz",
+    "express-generator": "^4.16.0"
   }
 }
