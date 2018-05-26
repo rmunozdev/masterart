@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "build": "npm run precache & npm start",
+    "precache": "sw-precache --root=public --config=sw-precache-config.js",
+    "start": "set PORT=8082 & set DEBUG=masterart:* & node ./bin/www"
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",
@@ -11,6 +13,10 @@
     "ejs": "~2.5.7",
     "express": "~4.16.0",
     "http-errors": "~1.6.2",
-    "morgan": "~1.9.0"
+    "morgan": "~1.9.0",
+    "sw-toolbox": "^3.6.0"
+  },
+  "devDependencies": {
+    "sw-precache": "^5.2.1"
   }
 }

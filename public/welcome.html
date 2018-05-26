@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Welcome!</title>
+<script>
+	//service worker registration
+	(()=>{
+		if(navigator.serviceWorker) {
+			navigator.serviceWorker.register("service-worker.js").then((swr)=>{
+				console.log("sw register success");
+			});
+		}
+	})();
+	
+	function checkMsg(){
+		fetch('users/all').then(response=> {
+			response.text().then(result => {
+				document.getElementById('msgDisplay').innerHTML = "<p>" + result + "</p>";	
+			});
+			
+		});
+	}
+</script>
+</head>
+<body>
+	<h1>Welcome to Masterart Web Page!</h1>
+	<p>Next i will try to use services worker and sw-precache 
+	in order to begin the application of pwa improvements</p>
+	<p>
+ Need some help, check our
+ <a href="help.html">support page</a></p>
+ <button onclick="checkMsg()">Check server message</button>
+ <div id="msgDisplay"></div>
+</body>
+</html>
