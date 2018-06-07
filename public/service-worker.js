@@ -37,7 +37,7 @@
 /* eslint-disable indent, no-unused-vars, no-multiple-empty-lines, max-nested-callbacks, space-before-function-paren, quotes, comma-spacing */
 'use strict';
 
-var precacheConfig = [["/help.html","d18d3e9ef8b68fbce8ae98bb6b7984f9"],["/stylesheets/help.css","76335379104df76fbb06deaa8224107b"],["/stylesheets/style.css","aae10ae0aba1f18fa26b4a6c5253b138"],["/welcome.html","8a7160c0688091be4c72c86f4b0a82b9"]];
+var precacheConfig = [["/help.html","d18d3e9ef8b68fbce8ae98bb6b7984f9"],["/missing.html","39517fc7fb14a3d48f351e00a5acaca5"],["/scripts/init.js","dc4e4fc5046b85f5a12220c392349be4"],["/styles/help.css","76335379104df76fbb06deaa8224107b"],["/styles/style.css","aae10ae0aba1f18fa26b4a6c5253b138"],["/welcome.html","8a7160c0688091be4c72c86f4b0a82b9"]];
 var cacheName = 'sw-precache-v3-sw-precache-' + (self.registration ? self.registration.scope : '');
 
 
@@ -229,7 +229,7 @@ self.addEventListener('fetch', function(event) {
 
     // If shouldRespond is still false, check to see if this is a navigation
     // request, and if so, whether the URL matches navigateFallbackWhitelist.
-    var navigateFallback = '/welcome.html';
+    var navigateFallback = '';
     if (!shouldRespond &&
         navigateFallback &&
         (event.request.mode === 'navigate') &&
@@ -285,7 +285,7 @@ self.addEventListener('fetch', function(event) {
 
 // Runtime cache configuration, using the sw-toolbox library.
 
-toolbox.router.get("/users/*", toolbox.networkFirst, {"cache":{"maxEntries":10,"name":"users-cache"}});
+toolbox.router.get("/*", toolbox.networkFirst, {"cache":{"maxEntries":10,"name":"master-cache"}});
 
 
 

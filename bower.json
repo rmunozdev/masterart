@@ -1,0 +1,17 @@
+{
+  "name": "masterart",
+  "description": "Master app",
+  "main": "index.js",
+  "authors": [
+    "Roberto Muñoz <rmunozdev@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/rmunozdev/masterart",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

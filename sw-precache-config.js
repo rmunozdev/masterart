@@ -2,22 +2,22 @@
  * 
  */
 module.exports = {
-		navigateFallback: '/welcome.html',
+		
 		stripPrefix: 'public',
 		root: 'public/',
 		staticFileGlobs: [
 			'public/**.html',
 			'public/scripts/**.js',
-			'public/stylesheets/**.css'
+			'public/styles/**.css'
 		],
 		runtimeCaching : [
 			{
-				urlPattern: '/users/*',
+				urlPattern: '/*',
 				handler: 'networkFirst',
 				options: {
 					cache: {
 						maxEntries: 10,
-						name: 'users-cache'
+						name: 'master-cache'
 					}
 				}
 			}
